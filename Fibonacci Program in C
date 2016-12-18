@@ -1,0 +1,28 @@
+//Fibonacci Program in C
+#include<stddio.h>
+int factorial(int n){
+	if(n==0){
+		return 1;
+	}else{
+		return n*factorial(n-1);
+	}
+}
+
+int fibonacci(int n){
+	if(n==0){
+		return 0;
+	}else if(n==1){
+		return 1;
+	}else{
+		return (fibonacci(n-1) + fibonacci(n));
+	}
+}
+main(){
+	int n= 5;
+	int i;
+	printf("Factorial of %d is %d", factorial(n));
+	printf("Fibonacci of %d is ", n);
+	for(i=0; i<n; i++){
+		printf("%d", fibonacci(i));
+	}
+}
